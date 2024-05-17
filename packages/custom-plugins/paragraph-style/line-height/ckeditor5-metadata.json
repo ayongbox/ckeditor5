@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    {
+      "name": "Line Height",
+      "className": "LineHeight",
+      "description": "Adds text to the editor.",
+      "path": "src/index.js",
+      "uiComponents": [
+        {
+          "name": "lineHeight",
+          "type": "Button",
+          "iconPath": "theme/icons/line-height.svg"
+        }
+      ]
+    }
+  ]
+}
