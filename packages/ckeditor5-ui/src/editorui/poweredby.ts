@@ -160,28 +160,28 @@ export default class PoweredBy extends /* #__PURE__ */ DomEmitterMixin() {
 	 * Attempts to display the balloon with the "powered by" view.
 	 */
 	private _showBalloon(): void {
-		if ( !this._lastFocusedEditableElement ) {
-			return;
-		}
+		// if ( !this._lastFocusedEditableElement ) {
+		// 	return;
+		// }
 
-		const attachOptions = getBalloonAttachOptions( this.editor, this._lastFocusedEditableElement );
+		// const attachOptions = getBalloonAttachOptions( this.editor, this._lastFocusedEditableElement );
 
-		if ( attachOptions ) {
-			if ( !this._balloonView ) {
-				this._createBalloonView();
-			}
+		// if ( attachOptions ) {
+		// 	if ( !this._balloonView ) {
+		// 		this._createBalloonView();
+		// 	}
 
-			this._balloonView!.pin( attachOptions );
-		}
+		// 	this._balloonView!.pin( attachOptions );
+		// }
 	}
 
 	/**
 	 * Hides the "powered by" balloon if already visible.
 	 */
 	private _hideBalloon(): void {
-		if ( this._balloonView ) {
-			this._balloonView!.unpin();
-		}
+		// if ( this._balloonView ) {
+		// 	this._balloonView!.unpin();
+		// }
 	}
 
 	/**
