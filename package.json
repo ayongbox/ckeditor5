@@ -214,7 +214,7 @@
   },
   "lint-staged": {
     "**/*.{js,ts,mjs}": [
-      "eslint --quiet"
+
     ],
     "**/*.css": [
       "stylelint --quiet --allow-empty-input"

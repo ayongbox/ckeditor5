@@ -27,7 +27,7 @@ import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 
 import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing, ImageResize } from '@ckeditor/ckeditor5-image';
-import { Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Code} from '@ckeditor/ckeditor5-basic-styles';
+import { Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Code } from '@ckeditor/ckeditor5-basic-styles';
 import { FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
 import { Highlight } from '@ckeditor/ckeditor5-highlight';
 import { List, ListProperties, TodoList } from '@ckeditor/ckeditor5-list';
@@ -36,8 +36,6 @@ import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
 import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
-// import Indent from '@ckeditor/ckeditor5-indent/src/indent';// 已有
-import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';//引入
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
@@ -71,11 +69,13 @@ export default class ClassicEditor extends ClassicEditorBase {
 		Underline, Strikethrough, Subscript, Superscript,
 		List, ListProperties, TodoList,
 		Alignment,
-		HorizontalLine, CodeBlock, SourceEditing, FindAndReplace,
-		IndentBlock
+		HorizontalLine, CodeBlock, SourceEditing, FindAndReplace
 	];
 
 	public static override defaultConfig = {
+		fontSize: {
+			options: [ 9, 11, 12, 14, 16, 18, 20, 24, 28, 30, 34],
+		   },
 		toolbar: {
 			items: [
 				'undo', 'redo',
