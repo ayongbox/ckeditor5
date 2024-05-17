@@ -11,7 +11,7 @@ import { CKBox } from '@ckeditor/ckeditor5-ckbox';
 import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
 import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Indent } from '@ckeditor/ckeditor5-indent';
+import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
@@ -30,10 +30,17 @@ import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 export default class ClassicEditor extends ClassicEditorBase {
-    static builtinPlugins: (typeof TextTransformation | typeof Essentials | typeof CKFinderUploadAdapter | typeof Paragraph | typeof Heading | typeof Autoformat | typeof BlockQuote | typeof Image | typeof ImageCaption | typeof ImageResize | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof CloudServices | typeof CKBox | typeof CKFinder | typeof EasyImage | typeof List | typeof ListProperties | typeof TodoList | typeof Indent | typeof Link | typeof MediaEmbed | typeof PasteFromOffice | typeof Table | typeof TableToolbar | typeof Superscript | typeof Subscript | typeof Bold | typeof Code | typeof Italic | typeof Strikethrough | typeof Underline | typeof FontColor | typeof FontFamily | typeof FontSize | typeof Highlight | typeof Alignment | typeof HorizontalLine | typeof CodeBlock | typeof SourceEditing | typeof FindAndReplace | typeof PictureEditing)[];
+    static builtinPlugins: (typeof TextTransformation | typeof Essentials | typeof CKFinderUploadAdapter | typeof Paragraph | typeof Heading | typeof Autoformat | typeof BlockQuote | typeof Image | typeof ImageCaption | typeof ImageResize | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof CloudServices | typeof CKBox | typeof CKFinder | typeof EasyImage | typeof List | typeof ListProperties | typeof TodoList | typeof Indent | typeof IndentBlock | typeof Link | typeof MediaEmbed | typeof PasteFromOffice | typeof Table | typeof TableToolbar | typeof Superscript | typeof Subscript | typeof Bold | typeof Code | typeof Italic | typeof Strikethrough | typeof Underline | typeof FontColor | typeof FontFamily | typeof FontSize | typeof Highlight | typeof Alignment | typeof HorizontalLine | typeof CodeBlock | typeof SourceEditing | typeof FindAndReplace | typeof PictureEditing)[];
     static defaultConfig: {
+        indentBlock: {
+            offset: number;
+            unit: string;
+        };
+        fontFamily: {
+            options: string[];
+        };
         fontSize: {
-            options: number[];
+            options: (string | number)[];
         };
         toolbar: {
             items: string[];

@@ -16,7 +16,7 @@ import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
 import { Heading } from '@ckeditor/ckeditor5-heading';
 // import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
-import { Indent } from '@ckeditor/ckeditor5-indent';
+import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
 // import { List } from '@ckeditor/ckeditor5-list';
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
@@ -69,12 +69,35 @@ export default class ClassicEditor extends ClassicEditorBase {
 		Underline, Strikethrough, Subscript, Superscript,
 		List, ListProperties, TodoList,
 		Alignment,
-		HorizontalLine, CodeBlock, SourceEditing, FindAndReplace
+		HorizontalLine, CodeBlock, SourceEditing, FindAndReplace,
+		IndentBlock
 	];
 
 	public static override defaultConfig = {
+		indentBlock: {
+			offset: 2,
+			unit: "em",
+		   },
+		'fontFamily': {
+			options: [
+				'default',
+				'宋体, SimSun, sans-serif',
+				'微软雅黑, Microsoft Yahei, monospace',
+				'黑体, SimHei, serif',
+				'楷体, KaiTi, sans-serif',
+				'隶书, LiSu, sans-serif',
+				'Arial, Helvetica, sans-serif',
+				'Courier New, Courier, monospace',
+				'Georgia, serif',
+				'Lucida Sans Unicode, Lucida Grande, sans-serif',
+				'Tahoma, Geneva, sans-serif',
+				'Times New Roman, Times, serif',
+				'Trebuchet MS, Helvetica, sans-serif',
+				'Verdana, Geneva, sans-serif',
+			],
+		},
 		fontSize: {
-			options: [ 9, 11, 12, 14, 16, 18, 20, 24, 28, 30, 34],
+			options: [12, 'default', 16, 18, 20, 24, 28, 32, 36, 42],
 		   },
 		toolbar: {
 			items: [
