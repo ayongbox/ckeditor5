@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    {
+      "name": "Indent first",
+      "className": "IndentFirst",
+      "description": "Adds text to the editor.",
+      "path": "src/indentfirst.js",
+      "uiComponents": [
+        {
+          "name": "indentFirst",
+          "type": "Button",
+          "iconPath": "theme/icons/indent-first.svg"
+        }
+      ]
+    }
+  ]
+}

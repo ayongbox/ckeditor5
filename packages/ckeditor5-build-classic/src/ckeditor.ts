@@ -37,6 +37,8 @@ import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 
+import { IndentFirst } from '../../ckeditor5-indent-first';
+
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
 		Essentials,
@@ -70,7 +72,10 @@ export default class ClassicEditor extends ClassicEditorBase {
 		List, ListProperties, TodoList,
 		Alignment,
 		HorizontalLine, CodeBlock, SourceEditing, FindAndReplace,
-		IndentBlock
+		IndentBlock,
+
+		// custom plugins with @hlw/ckeditor5-plugins
+		IndentFirst
 	];
 
 	public static override defaultConfig = {
@@ -106,7 +111,7 @@ export default class ClassicEditor extends ClassicEditorBase {
 				'|', 'fontFamily', 'fontSize', 'fontColor', 'highlight',
 				'|', 'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript',
 				'|', 'bulletedList', 'numberedList', 'todoList',
-				'|', 'alignment', 'outdent', 'indent',
+				'|', 'alignment', 'indentFirst','outdent', 'indent',
 				'|', 'horizontalLine', 'blockQuote', 'link', 'code', 'uploadImage', 'insertTable', 'codeBlock',
 				'|', 'sourceEditing', 'findAndReplace'
 			]
