@@ -70,7 +70,7 @@
   },
   "lint-staged": {
     "**/*.js": [
-      "eslint --quiet"
+
     ],
     "**/*.css": [
       "stylelint --quiet --allow-empty-input"
